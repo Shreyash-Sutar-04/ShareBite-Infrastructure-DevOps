@@ -1,0 +1,19 @@
+version: '3.8'
+services:
+  backend:
+    container_name: final-backend
+    image: shreyashsutar124/final-backend:latest
+    env_file:
+      - .env
+    ports:
+      - "8081:8080"
+    volumes:
+      - ./uploads:/app/uploads
+    restart: always
+
+  frontend:
+    container_name: final-frontend
+    image: shreyashsutar124/final-frontend:latest
+    ports:
+      - "80:80"
+    restart: always
