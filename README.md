@@ -190,10 +190,4 @@ Run the Jenkins Pipeline — it automatically:
 
 ---
 
-## 📄 License
-
-Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for details.
-
----
-
 <p align="center">⭐ If this project helped you, consider giving it a star!</p>
