@@ -1,55 +1,36 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>ShareBite - DevOps & Production Deployment</title>
-<style>
-  body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; max-width: 900px; margin: 40px auto; padding: 0 20px; line-height: 1.6; color: #24292f; }
-  h1, h2, h3 { border-bottom: 1px solid #d0d7de; padding-bottom: .3em; }
-  code, pre { background: #f6f8fa; border-radius: 6px; }
-  code { padding: 2px 6px; font-family: "SFMono-Regular", Consolas, monospace; }
-  pre { padding: 16px; overflow-x: auto; }
-  pre code { padding: 0; background: none; }
-  table { border-collapse: collapse; width: 100%; margin: 1em 0; }
-  th, td { border: 1px solid #d0d7de; padding: 8px 12px; text-align: left; }
-  th { background: #f6f8fa; }
-  blockquote { border-left: 4px solid #d0d7de; margin: 1em 0; padding: 0 1em; color: #57606a; }
-  a { color: #0969da; text-decoration: none; }
-  a:hover { text-decoration: underline; }
-  hr { border: none; border-top: 1px solid #d0d7de; margin: 2em 0; }
-</style>
-</head>
-<body>
+# 🥗 ShareBite - DevOps & Production Deployment
 
-<h1>🥗 ShareBite - DevOps & Production Deployment</h1>
-<p>ShareBite is a food donation platform that connects hotels with NGOs to reduce food waste through real-time food sharing. This repository contains the infrastructure, deployment configuration, and CI/CD pipeline used to deploy ShareBite on AWS.</p>
+ShareBite is a food donation platform that connects hotels with NGOs to reduce food waste through real-time food sharing. This repository contains the infrastructure, deployment configuration, and CI/CD pipeline used to deploy ShareBite on AWS.
 
-<hr>
+---
 
-<h2>📂 Application Repositories</h2>
-<p>The application source code is maintained in separate repositories:</p>
-<ul>
-  <li><strong>Backend</strong> (Spring Boot 3 / Java 21) → <a href="https://github.com/Shreyash-Sutar-04/final-project-backend">final-project-backend</a></li>
-  <li><strong>Frontend</strong> (React + Nginx) → <a href="https://github.com/Shreyash-Sutar-04/final-project-frontend">final-project-frontend</a></li>
-</ul>
+## 📂 Application Repositories
 
-<hr>
+The application source code is maintained in separate repositories:
 
-<h2>✨ Features</h2>
-<ul>
-  <li>Automated CI/CD Pipeline</li>
-  <li>Dockerized Spring Boot Backend</li>
-  <li>Dockerized React Frontend</li>
-  <li>Nginx Production Server</li>
-  <li>AWS RDS Integration</li>
-  <li>Docker Compose Deployment</li>
-  <li>Automated Docker Image Management</li>
-</ul>
+- 🔧 **Backend** — Spring Boot 3 / Java 21 → [`final-project-backend`](https://github.com/Shreyash-Sutar-04/final-project-backend)
+- 🎨 **Frontend** — React + Nginx → [`final-project-frontend`](https://github.com/Shreyash-Sutar-04/final-project-frontend)
 
-<hr>
+---
 
-<h2>🏗️ Architecture</h2>
-<pre><code>                        GitHub
+## ✨ Features
+
+| | |
+|---|---|
+| 🔁 | Automated CI/CD Pipeline |
+| 🐳 | Dockerized Spring Boot Backend |
+| 🐳 | Dockerized React Frontend |
+| 🌐 | Nginx Production Server |
+| ☁️ | AWS RDS Integration |
+| 📦 | Docker Compose Deployment |
+| 🧹 | Automated Docker Image Management |
+
+---
+
+## 🏗️ Architecture
+
+```text
+                        GitHub
                            │
                            │ Push
                            ▼
@@ -76,134 +57,143 @@
                        │
                        ▼
                 AWS RDS (MySQL)
-</code></pre>
+```
 
-<hr>
+---
 
-<h2>🚀 Tech Stack</h2>
-<table>
-  <tr><th>Category</th><th>Tools</th></tr>
-  <tr><td>☁️ Cloud</td><td>AWS EC2, AWS RDS, VPC, Security Groups</td></tr>
-  <tr><td>💻 Backend</td><td>Spring Boot 3, Java 21, Maven, JWT Authentication</td></tr>
-  <tr><td>🎨 Frontend</td><td>React, Nginx</td></tr>
-  <tr><td>⚙️ DevOps</td><td>Jenkins, Docker, Docker Compose, GitHub, Docker Hub</td></tr>
-  <tr><td>🗄️ Database</td><td>MySQL (AWS RDS)</td></tr>
-</table>
+## 🚀 Tech Stack
 
-<hr>
+| Category        | Tools |
+|------------------|-------|
+| ☁️ **Cloud**     | AWS EC2 · AWS RDS · VPC · Security Groups |
+| 💻 **Backend**   | Spring Boot 3 · Java 21 · Maven · JWT Authentication |
+| 🎨 **Frontend**  | React · Nginx |
+| ⚙️ **DevOps**    | Jenkins · Docker · Docker Compose · GitHub · Docker Hub |
+| 🗄️ **Database**  | MySQL (AWS RDS) |
 
-<h2>📁 Project Structure</h2>
-<pre><code>.
+---
+
+## 📁 Project Structure
+
+```text
+.
 ├── Jenkinsfile
 ├── docker-compose.yml
 ├── serverSetup.sh
 ├── README.md
 └── screenshots/
-</code></pre>
+```
 
-<hr>
+---
 
-<h2>🔄 CI/CD Workflow</h2>
-<ol>
-  <li>Code is pushed to the GitHub repositories.</li>
-  <li>Jenkins automatically clones the frontend and backend repositories.</li>
-  <li>The backend Docker image is built.</li>
-  <li>The frontend Docker image is built.</li>
-  <li>Both Docker images are pushed to Docker Hub.</li>
-  <li>The production server pulls the latest images.</li>
-  <li>Docker Compose recreates the containers with the updated images.</li>
-  <li>Old Docker images are removed to free up disk space.</li>
-</ol>
+## 🔄 CI/CD Workflow
 
-<hr>
+> Fully automated via Jenkins — push to deploy.
 
-<h2>⚙️ Installation / Deployment Steps</h2>
+1. **Push** — Code is pushed to the GitHub repositories.
+2. **Clone** — Jenkins automatically clones the frontend and backend repos.
+3. **Build** — Backend Docker image is built.
+4. **Build** — Frontend Docker image is built.
+5. **Publish** — Both images are pushed to Docker Hub.
+6. **Pull** — The production server pulls the latest images.
+7. **Deploy** — Docker Compose recreates the containers with updated images.
+8. **Cleanup** — Old Docker images are removed to free up disk space.
 
-<h3>1. Launch an EC2 Instance</h3>
-<p>Launch an Ubuntu Server and allow the following inbound ports:</p>
-<ul>
-  <li><code>22</code> (SSH)</li>
-  <li><code>80</code> (HTTP)</li>
-  <li><code>8080</code> (Jenkins)</li>
-</ul>
+---
 
-<h3>2. Configure the Server</h3>
-<pre><code>chmod +x serverSetup.sh
-./serverSetup.sh</code></pre>
-<p>The script installs:</p>
-<ul>
-  <li>Java 21</li>
-  <li>Jenkins</li>
-  <li>Docker</li>
-</ul>
+## ⚙️ Deployment Steps
 
-<h3>3. Create an AWS RDS Database</h3>
-<ul>
-  <li>Create a MySQL RDS instance.</li>
-  <li>Configure the Security Group.</li>
-  <li>Allow inbound connections from the EC2 instance.</li>
-  <li>Create the application database.</li>
-</ul>
+### 1️⃣ Launch an EC2 Instance
 
-<h3>4. Configure Jenkins</h3>
-<table>
-  <tr><th>Credential ID</th><th>Purpose</th></tr>
-  <tr><td><code>github-creds</code></td><td>GitHub authentication</td></tr>
-  <tr><td><code>docker-hub-creds</code></td><td>Docker Hub authentication</td></tr>
-</table>
-<p>Create a Pipeline job and configure it to use the <code>Jenkinsfile</code> from this repository.</p>
+Launch an Ubuntu Server and open the following inbound ports:
 
-<h3>5. Configure Environment Variables</h3>
-<p>Create a <code>.env</code> file inside the deployment directory and add the required application secrets, e.g.:</p>
-<ul>
-  <li>Database Credentials</li>
-  <li>JWT Secret</li>
-  <li>Stripe Keys</li>
-  <li>Twilio Credentials</li>
-  <li>Gemini API Key</li>
-</ul>
-<blockquote>⚠️ <strong>Never commit the <code>.env</code> file to GitHub.</strong></blockquote>
+| Port | Purpose |
+|------|---------|
+| `22` | SSH |
+| `80` | HTTP |
+| `8080` | Jenkins |
 
-<h3>6. Deploy the Application</h3>
-<p>Run the Jenkins Pipeline. It automatically:</p>
-<ul>
-  <li>Clones the repositories</li>
-  <li>Builds Docker images</li>
-  <li>Pushes images to Docker Hub</li>
-  <li>Pulls the latest images on EC2</li>
-  <li>Deploys the application using Docker Compose</li>
-</ul>
+### 2️⃣ Configure the Server
 
-<hr>
+```bash
+chmod +x serverSetup.sh
+./serverSetup.sh
+```
 
-<h2>🔒 Security</h2>
-<ul>
-  <li>Jenkins Credentials securely store GitHub and Docker Hub credentials.</li>
-  <li>Application secrets are stored locally in a <code>.env</code> file.</li>
-  <li>Sensitive information is never committed to GitHub.</li>
-</ul>
+Installs:
+- ☕ Java 21
+- 🔧 Jenkins
+- 🐳 Docker
 
-<hr>
+### 3️⃣ Create an AWS RDS Database
 
-<h2>🔮 Future Improvements</h2>
-<ul>
-  <li>HTTPS using Nginx and Let's Encrypt</li>
-  <li>AWS ECR for Docker image storage</li>
-  <li>Kubernetes deployment</li>
-  <li>Monitoring with Prometheus and Grafana</li>
-  <li>Centralized logging with ELK Stack</li>
-</ul>
+- [ ] Create a MySQL RDS instance
+- [ ] Configure the Security Group
+- [ ] Allow inbound connections from the EC2 instance
+- [ ] Create the application database
 
-<hr>
+### 4️⃣ Configure Jenkins
 
-<h2>👨‍💻 Author</h2>
-<p><strong>Shreyash Sutar</strong><br>
-Final Year Engineering Project demonstrating Cloud Computing, DevOps, CI/CD, Docker, Jenkins, and AWS deployment practices.</p>
+| Credential ID | Purpose |
+|----------------|---------|
+| `github-creds` | GitHub authentication |
+| `docker-hub-creds` | Docker Hub authentication |
 
-<hr>
+Create a **Pipeline job** pointing to the `Jenkinsfile` in this repository.
 
-<h2>📄 License</h2>
-<p>MIT — see <a href="LICENSE">LICENSE</a> file for details.</p>
+### 5️⃣ Configure Environment Variables
 
-</body>
-</html>
+Create a `.env` file inside the deployment directory with:
+
+- 🔑 Database Credentials
+- 🔐 JWT Secret
+- 💳 Stripe Keys
+- 📱 Twilio Credentials
+- 🤖 Gemini API Key
+
+> ⚠️ **Warning:** Never commit the `.env` file to GitHub.
+
+### 6️⃣ Deploy the Application
+
+Run the Jenkins Pipeline — it automatically:
+
+✅ Clones the repositories
+✅ Builds Docker images
+✅ Pushes images to Docker Hub
+✅ Pulls the latest images on EC2
+✅ Deploys via Docker Compose
+
+---
+
+## 🔒 Security
+
+- 🔐 Jenkins Credentials securely store GitHub and Docker Hub credentials
+- 🗃️ Application secrets are stored locally in a `.env` file
+- 🚫 Sensitive information is never committed to GitHub
+
+---
+
+## 🔮 Future Improvements
+
+- [ ] HTTPS using Nginx and Let's Encrypt
+- [ ] AWS ECR for Docker image storage
+- [ ] Kubernetes deployment
+- [ ] Monitoring with Prometheus and Grafana
+- [ ] Centralized logging with ELK Stack
+
+---
+
+## 👨‍💻 Author
+
+**Shreyash Sutar**
+*Final Year Engineering Project demonstrating Cloud Computing, DevOps, CI/CD, Docker, Jenkins, and AWS deployment practices.*
+
+---
+
+## 📄 License
+
+Distributed under the **MIT License**. See [`LICENSE`](LICENSE) for details.
+
+---
+
+<p align="center">⭐ If this project helped you, consider giving it a star!</p>
