@@ -4,30 +4,30 @@ ShareBite is a food donation platform that connects hotels with NGOs to reduce f
 
 ---
 
-## 📂 Application Repositories
+##  Application Repositories
 
 The application source code is maintained in separate repositories:
 
-- 🔧 **Backend** — Spring Boot 3 / Java 21 → [`final-project-backend`](https://github.com/Shreyash-Sutar-04/final-project-backend)
-- 🎨 **Frontend** — React + Nginx → [`final-project-frontend`](https://github.com/Shreyash-Sutar-04/final-project-frontend)
+-  **Backend** — Spring Boot 3 / Java 21 → [`final-project-backend`](https://github.com/Shreyash-Sutar-04/final-project-backend)
+-  **Frontend** — React + Nginx → [`final-project-frontend`](https://github.com/Shreyash-Sutar-04/final-project-frontend)
 
 ---
 
-## ✨ Features
+##  Features
 
 | | |
 |---|---|
-| 🔁 | Automated CI/CD Pipeline |
-| 🐳 | Dockerized Spring Boot Backend |
-| 🐳 | Dockerized React Frontend |
-| 🌐 | Nginx Production Server |
-| ☁️ | AWS RDS Integration |
-| 📦 | Docker Compose Deployment |
-| 🧹 | Automated Docker Image Management |
+ | Automated CI/CD Pipeline |
+ | Dockerized Spring Boot Backend |
+ | Dockerized React Frontend |
+ | Nginx Production Server |
+ | AWS RDS Integration |
+ | Docker Compose Deployment |
+ | Automated Docker Image Management |
 
 ---
 
-## 🏗️ Architecture
+##  Architecture
 
 ```text
                         GitHub
@@ -61,19 +61,19 @@ The application source code is maintained in separate repositories:
 
 ---
 
-## 🚀 Tech Stack
+##  Tech Stack
 
 | Category        | Tools |
 |------------------|-------|
-| ☁️ **Cloud**     | AWS EC2 · AWS RDS · VPC · Security Groups |
-| 💻 **Backend**   | Spring Boot 3 · Java 21 · Maven · JWT Authentication |
-| 🎨 **Frontend**  | React · Nginx |
-| ⚙️ **DevOps**    | Jenkins · Docker · Docker Compose · GitHub · Docker Hub |
-| 🗄️ **Database**  | MySQL (AWS RDS) |
+|  **Cloud**     | AWS EC2 · AWS RDS · VPC · Security Groups |
+|  **Backend**   | Spring Boot 3 · Java 21 · Maven · JWT Authentication |
+|  **Frontend**  | React · Nginx |
+|  **DevOps**    | Jenkins · Docker · Docker Compose · GitHub · Docker Hub |
+|  **Database**  | MySQL (AWS RDS) |
 
 ---
 
-## 📁 Project Structure
+##  Project Structure
 
 ```text
 .
@@ -86,7 +86,7 @@ The application source code is maintained in separate repositories:
 
 ---
 
-## 🔄 CI/CD Workflow
+##  CI/CD Workflow
 
 > Fully automated via Jenkins — push to deploy.
 
@@ -101,9 +101,9 @@ The application source code is maintained in separate repositories:
 
 ---
 
-## ⚙️ Deployment Steps
+##  Deployment Steps
 
-### 1️⃣ Launch an EC2 Instance
+### 1️) Launch an EC2 Instance
 
 Launch an Ubuntu Server and open the following inbound ports:
 
@@ -113,7 +113,7 @@ Launch an Ubuntu Server and open the following inbound ports:
 | `80` | HTTP |
 | `8080` | Jenkins |
 
-### 2️⃣ Configure the Server
+### 2) Configure the Server
 
 ```bash
 chmod +x serverSetup.sh
@@ -121,18 +121,18 @@ chmod +x serverSetup.sh
 ```
 
 Installs:
-- ☕ Java 21
-- 🔧 Jenkins
-- 🐳 Docker
+-  Java 21
+-  Jenkins
+-  Docker
 
-### 3️⃣ Create an AWS RDS Database
+### 3) Create an AWS RDS Database
 
 - [ ] Create a MySQL RDS instance
 - [ ] Configure the Security Group
 - [ ] Allow inbound connections from the EC2 instance
 - [ ] Create the application database
 
-### 4️⃣ Configure Jenkins
+### 4) Configure Jenkins
 
 | Credential ID | Purpose |
 |----------------|---------|
@@ -141,39 +141,39 @@ Installs:
 
 Create a **Pipeline job** pointing to the `Jenkinsfile` in this repository.
 
-### 5️⃣ Configure Environment Variables
+### 5) Configure Environment Variables
 
 Create a `.env` file inside the deployment directory with:
 
-- 🔑 Database Credentials
-- 🔐 JWT Secret
-- 💳 Stripe Keys
-- 📱 Twilio Credentials
-- 🤖 Gemini API Key
+-  Database Credentials
+-  JWT Secret
+-  Stripe Keys
+-  Twilio Credentials
+-  Gemini API Key
 
-> ⚠️ **Warning:** Never commit the `.env` file to GitHub.
+>  **Warning:** Never commit the `.env` file to GitHub.
 
-### 6️⃣ Deploy the Application
+### 6) Deploy the Application
 
 Run the Jenkins Pipeline — it automatically:
 
-✅ Clones the repositories
-✅ Builds Docker images
-✅ Pushes images to Docker Hub
-✅ Pulls the latest images on EC2
-✅ Deploys via Docker Compose
+- Clones the repositories
+- Builds Docker images
+- Pushes images to Docker Hub
+- Pulls the latest images on EC2
+- Deploys via Docker Compose
 
 ---
 
-## 🔒 Security
+##  Security
 
-- 🔐 Jenkins Credentials securely store GitHub and Docker Hub credentials
-- 🗃️ Application secrets are stored locally in a `.env` file
-- 🚫 Sensitive information is never committed to GitHub
+-  Jenkins Credentials securely store GitHub and Docker Hub credentials
+-  Application secrets are stored locally in a `.env` file
+-  Sensitive information is never committed to GitHub
 
 ---
 
-## 🔮 Future Improvements
+##  Future Improvements
 
 - [ ] HTTPS using Nginx and Let's Encrypt
 - [ ] AWS ECR for Docker image storage
@@ -183,7 +183,7 @@ Run the Jenkins Pipeline — it automatically:
 
 ---
 
-## 👨‍💻 Author
+##  Author
 
 **Shreyash Sutar**
 *Final Year Engineering Project demonstrating Cloud Computing, DevOps, CI/CD, Docker, Jenkins, and AWS deployment practices.*
