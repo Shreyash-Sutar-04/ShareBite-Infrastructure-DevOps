@@ -16,7 +16,7 @@ The application source code is maintained in separate repositories:
 ##  Features
 
 | | |
-|---|
+|---|---|
  | Automated CI/CD Pipeline |
  | Dockerized Spring Boot Backend |
  | Dockerized React Frontend |
