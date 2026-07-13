@@ -189,5 +189,3 @@ Run the Jenkins Pipeline — it automatically:
 *Final Year Engineering Project demonstrating Cloud Computing, DevOps, CI/CD, Docker, Jenkins, and AWS deployment practices.*
 
 ---
-
-<p align="center">⭐ If this project helped you, consider giving it a star!</p>
